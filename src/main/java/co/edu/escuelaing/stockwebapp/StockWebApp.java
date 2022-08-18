@@ -10,7 +10,7 @@ public class StockWebApp {
 
         get("/stock", (req, res) -> {
             res.type("application/json");
-            return HttpConnectionExample.getStock();
+            return HttpConnectionExample.getStock(req.queryParams("name"));
         });
 
 
